@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 const Footer = () => {
-  console.log("dd");
+  console.log("ddddd");
   const onClick = (num: number) => {
     num === 1 && window.open("https://github.com/innerstella");
     num === 2 && window.open("https://inner-stella.tistory.com/");
