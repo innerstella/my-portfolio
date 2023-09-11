@@ -9,6 +9,7 @@ const Footer = () => {
         "https://www.linkedin.com/in/%EC%88%98%EC%A7%80-%EC%B0%A8-b22963289/"
       );
   };
+
   return (
     <MainContainer>
       <div className="link-box">
@@ -23,9 +24,7 @@ const Footer = () => {
         </span>
       </div>
 
-      <p className="section-p-light">
-        © 2023. Cha Su Ji. last updated 23.08.23.
-      </p>
+      <p className="section-p-light">© Cha Su Ji. Last Updated 23.09.12.</p>
     </MainContainer>
   );
 };
