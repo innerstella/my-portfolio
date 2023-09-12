@@ -5,15 +5,36 @@ import Section3 from "./Section3";
 import Section4 from "./Section4";
 import Section5 from "./Section5";
 import Footer from "../components/Footer";
+import { useEffect, useState } from "react";
 
 const HomePage = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <MainContainer>
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
+      {windowWidth > 1000 ? (
+        <>
+          <Section1 />
+          <Section2 />
+          <Section3 />
+          <Section4 />
+          <Section5 />
+        </>
+      ) : (
+        <p>mobile view</p>
+      )}
+
       <Footer />
     </MainContainer>
   );

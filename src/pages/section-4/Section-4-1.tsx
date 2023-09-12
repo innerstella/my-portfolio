@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import Subtitle from "../../components/SubTitle";
 import Button from "../../components/Button";
+import { motion } from "framer-motion";
 
 const Section41 = () => {
   const onClick = (num: number) => {
@@ -10,25 +11,37 @@ const Section41 = () => {
     <>
       <ExpContainer>
         <div className="title-box">
-          <p className="title-text">연픽</p>
+          <p className="title-text up">연픽</p>
           <Button type={1} onClick={() => onClick(1)} />
         </div>
-        <p className="section-p">
-          3만 유저가 사용하는 대학생 소개팅∙미팅 매칭 서비스
-        </p>
-        <div className="info-box">
-          <div className="info-col">
-            <p className="section-p">period</p>
-            <p className="section-p">position</p>
-            <p className="section-p">tech</p>
-          </div>
-          <div className="info-col">
-            <p className="section-p-light">23.04 ~ 23.08</p>
-            <p className="section-p-light">프론트엔드 웹 개발</p>
-            <p className="section-p-light">
-              Next.js, TypeScript, Redux, React Query, Emotion
+        <div className="info-container">
+          <div>
+            <p className="section-p-light content">
+              3만 유저가 사용하는 대학생 소개팅∙미팅 매칭 서비스
             </p>
+            <div className="info-box">
+              <div className="info-col">
+                <p className="section-p">period</p>
+                <p className="section-p">position</p>
+                <p className="section-p">tech</p>
+              </div>
+              <div className="info-col">
+                <p className="section-p-light">23.04 ~ 23.08</p>
+                <p className="section-p-light">프론트엔드 웹 개발</p>
+                <p className="section-p-light">
+                  Next.js, TypeScript, Redux, React Query, Emotion
+                </p>
+              </div>
+            </div>
           </div>
+          <motion.img
+            src="/assets/png/img-yeonpick.png"
+            alt="rapvi"
+            className="img up pointer"
+            onClick={() => onClick(1)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          />
         </div>
         <Subtitle content="웹사이트 전체 리뉴얼" />
         <li className="section-p-light line-gap ">
@@ -67,6 +80,102 @@ const Section41 = () => {
           빠르고 정확한 버그 수정을 위한 CS팀과 개발팀 간 시스템 구축
         </li>
       </ExpContainer>
+      {/* <motion.img
+        src="/assets/svg/circle-purple.svg"
+        alt="circle"
+        style={{
+          position: "absolute",
+          top: "2100px",
+          left: "-5rem",
+          zIndex: 1,
+          width: "13rem",
+        }}
+        initial={{ y: "0px" }}
+        animate={{
+          y: "1rem",
+        }}
+        transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
+      />
+      <motion.img
+        src="/assets/svg/circle-pink.svg"
+        alt="circle"
+        style={{
+          position: "absolute",
+          top: "2050px",
+          left: "5rem",
+          zIndex: 1,
+          width: "7rem",
+        }}
+        initial={{ y: "0px" }}
+        animate={{
+          y: "1rem",
+        }}
+        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
+      /> */}
+      {/* <motion.img
+        src="/assets/svg/circle-purple.svg"
+        alt="circle"
+        style={{
+          position: "absolute",
+          top: "2340px",
+          left: "57rem",
+          zIndex: 1,
+          width: "7rem",
+        }}
+        initial={{ y: "0px" }}
+        animate={{
+          y: "1rem",
+        }}
+        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
+      />
+      <motion.img
+        src="/assets/svg/circle-pink.svg"
+        alt="circle"
+        style={{
+          position: "absolute",
+          top: "2600px",
+          left: "81rem",
+          zIndex: 1,
+          width: "5rem",
+        }}
+        initial={{ y: "0px" }}
+        animate={{
+          y: "1rem",
+        }}
+        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
+      />
+      <motion.img
+        src="/assets/svg/circle-purple.svg"
+        alt="circle"
+        style={{
+          position: "absolute",
+          top: "2900px",
+          left: "74rem",
+          zIndex: 1,
+          width: "10rem",
+        }}
+        initial={{ y: "0px" }}
+        animate={{
+          y: "1rem",
+        }}
+        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
+      />
+      <motion.img
+        src="/assets/svg/circle-pink.svg"
+        alt="circle"
+        style={{
+          position: "absolute",
+          top: "2930px",
+          left: "70rem",
+          zIndex: 1,
+          width: "5rem",
+        }}
+        initial={{ y: "0px" }}
+        animate={{
+          y: "1rem",
+        }}
+        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
+      /> */}
     </>
   );
 };
@@ -74,11 +183,21 @@ const Section41 = () => {
 export default Section41;
 
 const ExpContainer = styled.div`
+  .up {
+    z-index: 5;
+  }
   .margin {
     height: 4rem;
   }
   .line-gap {
     padding-bottom: 1rem;
+  }
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .img {
+    width: 17rem;
   }
   .title-box {
     display: flex;
@@ -94,16 +213,27 @@ const ExpContainer = styled.div`
       line-height: normal;
     }
   }
-  .info-box {
+  .info-container {
     display: flex;
     flex-direction: row;
-    padding-top: 2rem;
-    padding-bottom: 7rem;
-    gap: 2rem;
-    .info-col {
+    gap: 5rem;
+    justify-content: space-between;
+    margin-bottom: -13rem;
+    .content {
+      width: 45rem;
+    }
+    .info-box {
       display: flex;
-      flex-direction: column;
-      gap: 1rem;
+      flex-direction: row;
+      padding-top: 2rem;
+      padding-bottom: 3rem;
+      gap: 2rem;
+      width: 45rem;
+      .info-col {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
     }
   }
 `;

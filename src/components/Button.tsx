@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { motion } from "framer-motion";
 
 type Props = {
   type: number;
@@ -10,7 +11,7 @@ type Props = {
 // 3 : 개발일지
 const Button = ({ type, onClick }: Props) => {
   return (
-    <>
+    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
       <Container onClick={onClick} className="pointer">
         {type === 1 && (
           <>
@@ -43,7 +44,7 @@ const Button = ({ type, onClick }: Props) => {
           </>
         )}
       </Container>
-    </>
+    </motion.div>
   );
 };
 

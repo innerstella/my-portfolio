@@ -1,15 +1,15 @@
 import { styled } from "styled-components";
 import Subtitle from "../../components/SubTitle";
-import Button from "../../components/Button";
+import { motion } from "framer-motion";
 
 const Section42 = () => {
   return (
     <>
       <ExpContainer>
         <div className="title-box">
-          <p className="title-text">고려대학교 NEXT X 멋쟁이사자처럼 10기</p>
+          <p className="title-text up">고려대학교 NEXT X 멋쟁이사자처럼 10기</p>
         </div>
-        <p className="section-p">
+        <p className="section-p-light up">
           서비스 기획에서부터 코딩을 통한 구현까지 경험하며 새로운 가치 창출에
           도전하고 학회원들간 열정과 비전을 공유하는 소프트웨어벤처 학회
         </p>
@@ -23,25 +23,91 @@ const Section42 = () => {
             <p className="section-p-light">학회원</p>
           </div>
         </div>
-        <Subtitle content="세션 참여" />
-        <li className="section-p-light line-gap ">
-          기획 및 개발 관련 학습 세션 참여
-        </li>
-        <li className="section-p-light line-gap ">
-          프론트엔드 세션 진행 - React
-        </li>
-        <div className="margin"></div>
-        <Subtitle content="프로젝트" />
-        <li className="section-p-light line-gap ">
-          자체 해커톤 진행 - 궁예 퀴즈
-        </li>
-        <li className="section-p-light line-gap ">
-          서울대 멋사 연합 해커톤 진행 - 오늘 뭐해?
-        </li>
-        <li className="section-p-light line-gap ">
-          수료 프로젝트 - 나의 내일에게
-        </li>
+        <div className="flex-row">
+          <div>
+            <Subtitle content="세션 참여" />
+            <li className="section-p-light line-gap ">
+              기획 및 개발 관련 학습 세션 참여
+            </li>
+            <li className="section-p-light line-gap ">
+              프론트엔드 세션 진행 - React
+            </li>
+            <div className="margin"></div>
+          </div>
+          <div>
+            <Subtitle content="프로젝트" />
+            <li className="section-p-light line-gap ">자체 해커톤 진행</li>
+            <li className="section-p-light line-gap ">
+              서울대 멋사 연합 해커톤 진행
+            </li>
+            <li className="section-p-light line-gap ">수료 프로젝트</li>
+          </div>
+        </div>
       </ExpContainer>
+      {/* <motion.img
+        src="/assets/svg/circle-red.svg"
+        alt="circle"
+        style={{
+          position: "absolute",
+          top: "3700px",
+          left: "-3rem",
+          zIndex: 1,
+          width: "13rem",
+        }}
+        initial={{ y: "0px" }}
+        animate={{
+          y: "1rem",
+        }}
+        transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
+      />
+      <motion.img
+        src="/assets/svg/circle-yellow.svg"
+        alt="circle"
+        style={{
+          position: "absolute",
+          top: "3650px",
+          left: "7rem",
+          zIndex: 1,
+          width: "7rem",
+        }}
+        initial={{ y: "0px" }}
+        animate={{
+          y: "1rem",
+        }}
+        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
+      /> */}
+      {/* <motion.img
+        src="/assets/svg/circle-yellow.svg"
+        alt="circle"
+        style={{
+          position: "absolute",
+          top: "4300px",
+          left: "70rem",
+          zIndex: 1,
+          width: "4rem",
+        }}
+        initial={{ y: "0px" }}
+        animate={{
+          y: "1rem",
+        }}
+        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
+      />
+      <motion.img
+        src="/assets/svg/circle-red.svg"
+        alt="circle"
+        style={{
+          position: "absolute",
+          top: "4400px",
+          left: "77rem",
+          zIndex: 1,
+          width: "10rem",
+        }}
+        initial={{ y: "0px" }}
+        animate={{
+          y: "1rem",
+        }}
+        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
+      /> */}
     </>
   );
 };
@@ -49,11 +115,20 @@ const Section42 = () => {
 export default Section42;
 
 const ExpContainer = styled.div`
+  .up {
+    z-index: 5;
+  }
   .margin {
     height: 4rem;
   }
   .line-gap {
     padding-bottom: 1rem;
+  }
+  .flex-row {
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
   .title-box {
     display: flex;

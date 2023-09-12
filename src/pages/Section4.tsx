@@ -18,8 +18,7 @@ const Section4 = () => {
 export default Section4;
 
 const MainContainer = styled.div`
-  margin-top: 7rem;
-  padding: 0rem 10rem 0rem 10rem;
+  padding: 0 10vw 0 10vw;
   color: #fff;
   font-family: "SUIT", sans-serif;
   .margin {
