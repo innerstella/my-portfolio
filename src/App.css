@@ -1,4 +1,10 @@
-/* 섹션 별 고정값  */
+.pointer {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+/* 웹 섹션 별 고정값  */
 .section-title {
   font-size: 4rem;
   font-style: normal;
@@ -20,10 +26,28 @@
   font-weight: 300;
   line-height: 168.8%;
 }
-.pointer {
-  &:hover {
-    cursor: pointer;
-  }
+
+/* 모바일 섹션 별 고정값  */
+.mobile-title {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  padding-bottom: 3rem;
+}
+.mobile-p {
+  color: #fff;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 168.8%;
+}
+.mobile-p-light {
+  color: #fff;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 168.8%;
 }
 
 .App {

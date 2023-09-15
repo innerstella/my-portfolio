@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import Subtitle from "../../components/SubTitle";
+import Subtitle from "../../../components/SubTitle";
 import { motion } from "framer-motion";
 
 const Section42 = () => {

@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
-import Subtitle from "../../components/SubTitle";
-import Button from "../../components/Button";
-import DisplaySwiper from "../../components/Swiper";
+import Subtitle from "../../../components/SubTitle";
+import Button from "../../../components/Button";
+import DisplaySwiper from "../../../components/Swiper";
 import { motion } from "framer-motion";
 
 const Section53 = () => {
@@ -78,7 +78,6 @@ const Section53 = () => {
             <li className="section-p-light line-gap ">
               레시피를 모아볼 수 있는 기능과 키워드 별로 볼 수 있는 기능 개발
             </li>
-            <li className="section-p-light line-gap ">HTML5 위주 하드 코딩 </li>
           </div>
         </div>
       </ExpContainer>
