@@ -1,9 +1,9 @@
 import { styled } from "styled-components";
-import Section1 from "./Section1";
-import Section2 from "./Section2";
-import Section3 from "./Section3";
-import Section4 from "./Section4";
-import Section5 from "./Section5";
+import Section1 from "./web/Section1";
+import Section2 from "./web/Section2";
+import Section3 from "./web/Section3";
+import Section4 from "./web/Section4";
+import Section5 from "./web/Section5";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 import Mobile1 from "./mobile/section1/Mobile1";
@@ -36,6 +36,7 @@ const HomePage = () => {
           <Section3 />
           <Section4 />
           <Section5 />
+          <Footer />
         </>
       ) : (
         <>
@@ -47,8 +48,6 @@ const HomePage = () => {
           <MobileFooter />
         </>
       )}
-
-      <Footer />
     </MainContainer>
   );
 };
@@ -57,8 +56,10 @@ export default HomePage;
 
 const MainContainer = styled.div`
   height: 100%;
+  width: 100vw;
   background-color: #1e204f;
   align-content: center;
+  overflow-x: hidden;
 `;
 
 // const HomePage = () => {

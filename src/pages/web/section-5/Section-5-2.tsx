@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
-import Subtitle from "../../components/SubTitle";
-import Button from "../../components/Button";
-import DisplaySwiper from "../../components/Swiper";
+import Subtitle from "../../../components/SubTitle";
+import Button from "../../../components/Button";
+import DisplaySwiper from "../../../components/Swiper";
 import { motion } from "framer-motion";
 
 const Section52 = () => {
@@ -10,7 +10,9 @@ const Section52 = () => {
     num === 2 &&
       window.open("https://github.com/innerstella/new-twitter-michelin");
     num === 3 &&
-      window.open("https://github.com/innerstella/new-twitter-michelin"); // 개발일지 쓰고 교체
+      window.open(
+        "https://inner-stella.tistory.com/entry/%EB%A7%9B%EC%A7%91-%EA%B2%80%EC%83%89%EA%B8%B0-React-%EB%A6%AC%ED%8C%A9%ED%84%B0%EB%A7%81"
+      );
     num === 4 && window.open("https://github.com/innerstella/FME");
     num === 5 &&
       window.open(
@@ -37,7 +39,7 @@ const Section52 = () => {
                 <p className="section-p">tech</p>
               </div>
               <div className="info-col">
-                <p className="section-p-light">22.12 ~ 23.03</p>
+                <p className="section-p-light">22.01 ~ 23.08</p>
                 <p className="section-p-light">1인 프로젝트</p>
                 <p className="section-p-light">
                   React, TypeScript, Styled-Components

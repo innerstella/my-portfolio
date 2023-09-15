@@ -1,54 +1,41 @@
 import { styled } from "styled-components";
-import Subtitle from "../../components/SubTitle";
-import Button from "../../components/Button";
+import Subtitle from "../../../components/SubTitle";
+import Button from "../../../components/Button";
 import { motion } from "framer-motion";
 
-const Section51 = () => {
+const Section41 = () => {
   const onClick = (num: number) => {
-    num === 1 && window.open("https://rapvi-ku.web.app/");
-    num === 2 &&
-      window.open(
-        "https://inner-stella.tistory.com/entry/%EC%95%BD-4%EA%B0%9C%EC%9B%94-%EA%B0%84%EC%9D%98-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%A5%BC-%EB%81%9D%EB%82%B4%EA%B3%A0-%EC%93%B0%EB%8A%94-%EA%B0%9C%EC%9D%B8-%ED%9A%8C%EA%B3%A0"
-      );
+    num === 1 && window.open("https://yeonpick.kr/");
   };
   return (
     <>
       <ExpContainer>
-        <p className="up title-text">증기침입 위해성 평가 (RAPVI)</p>
         <div className="title-box">
+          <p className="title-text up">연픽</p>
           <Button type={1} onClick={() => onClick(1)} />
-          <Button type={3} onClick={() => onClick(2)} />
         </div>
         <div className="info-container">
           <div>
+            <p className="section-p-light content">
+              3만 유저가 사용하는 대학생 소개팅∙미팅 매칭 서비스
+            </p>
             <div className="info-box">
               <div className="info-col">
                 <p className="section-p">period</p>
-                <p className="section-p">team</p>
                 <p className="section-p">position</p>
                 <p className="section-p">tech</p>
               </div>
               <div className="info-col">
-                <p className="section-p-light">22.12 ~ 23.03</p>
-                <p className="section-p-light">연구 3 / 기획 2 / 개발 2</p>
-                <p className="section-p-light">개발팀장, 프론트엔드 개발</p>
+                <p className="section-p-light">23.04 ~ 23.08</p>
+                <p className="section-p-light">프론트엔드 웹 개발</p>
                 <p className="section-p-light">
-                  React, JavaScript, Styled-Components
+                  Next.js, TypeScript, Redux, React Query, Emotion
                 </p>
               </div>
             </div>
-            <p className="section-p-light">
-              RAPVI(Risk Assessment Program for Vapor Intrusion)는 증기침입으로
-              인해 발생하는 위해성을 평가하기 위해 제작된 프로그램으로,
-              고려대학교 지구환경과학과 환경수리지질연구실에서 제작하였습니다.
-              총 2가지 유형(기본 평가와 부지 기반 평가)의 위해성 평가를 진행할
-              수 있으며, 기존 MATLAB 프로그램 방식 대신 웹 기반 서비스로
-              제공하여 사용자 편의성을 높였으며, 평가에 대한 결과를 보고서
-              형식으로 생성한 후 PDF로 저장할 수 있게 하였습니다{" "}
-            </p>
           </div>
           <motion.img
-            src="/assets/png/img-rapvi.png"
+            src="/assets/png/img-yeonpick.png"
             alt="rapvi"
             className="img up pointer"
             onClick={() => onClick(1)}
@@ -56,32 +43,49 @@ const Section51 = () => {
             whileTap={{ scale: 0.9 }}
           />
         </div>
-        <div className="margin"></div>
-        <Subtitle content="기능 개발/기획" />
+        <Subtitle content="웹사이트 전체 리뉴얼" />
         <li className="section-p-light line-gap ">
-          csv 데이터를 간편하게 입력하고 확인할 수 있도록 에디터 구현 전체 평가
+          React 기반의 Next.js 개발 환경 구축
         </li>
+        <li className="section-p-light line-gap ">Redux, React Query 활용</li>
         <li className="section-p-light line-gap ">
-          유저가 입력한 값을 효과적으로 확인할 수 있도록 히트맵, 그래프, 표,
-          지도(Google Maps API)로 시각화
-        </li>
-        <li className="section-p-light line-gap ">
-          과정에 대한 보고서를 PDF 형식으로 출력하는 기능 개발
+          신규 기술 스택 및 개발 환경 관련 내부 문서 작성
         </li>
         <div className="margin"></div>
-        <Subtitle content="프로젝트 관리" />
+        <Subtitle content="각종 기능 개발/기획" />
         <li className="section-p-light line-gap ">
-          배포 및 유지보수 비용 계획 수립
+          리뷰 작성 시 코인 지급 기능 개발
         </li>
-        <li className="section-p-light line-gap ">팀 별 협업 소통 방식 정립</li>
-        <li className="section-p-light line-gap ">기능 개발 일정 관리</li>
+        <li className="section-p-light line-gap ">
+          매칭된 상대방의 매너 평가하는 기능 개발
+        </li>
+        <li className="section-p-light line-gap ">
+          홈화면에서 유저의 CTA 버튼 클릭률을 높이기 위한 A/B Testing 진행
+        </li>
+        <li className="section-p-light line-gap ">
+          매칭률 상승을 위한 프로필 확인 페이지 개선
+        </li>
+        <div className="margin"></div>
+        <Subtitle content="개발팀의 협업 체계 정리 및 문서화" />
+        <li className="section-p-light line-gap ">
+          팀 내 효과적인 협업 및 정보 공유를 위한 사내 위키 작성 및 컨벤션 정립
+        </li>
+        <li className="section-p-light line-gap ">
+          신규 입사자의 빠른 적응을 위한 온보딩 문서 작성
+        </li>
+        <li className="section-p-light line-gap ">
+          안정적인 신규 기능 배포를 위한 QA 시스템 도입 및 내부 세션 진행
+        </li>
+        <li className="section-p-light line-gap ">
+          빠르고 정확한 버그 수정을 위한 CS팀과 개발팀 간 시스템 구축
+        </li>
       </ExpContainer>
       {/* <motion.img
-        src="/assets/svg/circle-yellow.svg"
+        src="/assets/svg/circle-purple.svg"
         alt="circle"
         style={{
           position: "absolute",
-          top: "4700px",
+          top: "2100px",
           left: "-5rem",
           zIndex: 1,
           width: "13rem",
@@ -93,11 +97,11 @@ const Section51 = () => {
         transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
       />
       <motion.img
-        src="/assets/svg/circle-red.svg"
+        src="/assets/svg/circle-pink.svg"
         alt="circle"
         style={{
           position: "absolute",
-          top: "4640px",
+          top: "2050px",
           left: "5rem",
           zIndex: 1,
           width: "7rem",
@@ -108,30 +112,14 @@ const Section51 = () => {
         }}
         transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
       /> */}
-      {/*  <motion.img
-        src="/assets/svg/circle-red.svg"
+      {/* <motion.img
+        src="/assets/svg/circle-purple.svg"
         alt="circle"
         style={{
           position: "absolute",
-          top: "5400px",
-          left: "47rem",
+          top: "2340px",
+          left: "57rem",
           zIndex: 1,
-          width: "6rem",
-        }}
-        initial={{ y: "0px" }}
-        animate={{
-          y: "1rem",
-        }}
-        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
-      />
-       <motion.img
-        src="/assets/svg/circle-red.svg"
-        alt="circle"
-        style={{
-          position: "absolute",
-          top: "5500px",
-          left: "75rem",
-          zIndex: 2,
           width: "7rem",
         }}
         initial={{ y: "0px" }}
@@ -141,14 +129,46 @@ const Section51 = () => {
         transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
       />
       <motion.img
-        src="/assets/svg/circle-yellow.svg"
+        src="/assets/svg/circle-pink.svg"
         alt="circle"
         style={{
           position: "absolute",
-          top: "5570px",
-          left: "75rem",
+          top: "2600px",
+          left: "81rem",
           zIndex: 1,
-          width: "12rem",
+          width: "5rem",
+        }}
+        initial={{ y: "0px" }}
+        animate={{
+          y: "1rem",
+        }}
+        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
+      />
+      <motion.img
+        src="/assets/svg/circle-purple.svg"
+        alt="circle"
+        style={{
+          position: "absolute",
+          top: "2900px",
+          left: "74rem",
+          zIndex: 1,
+          width: "10rem",
+        }}
+        initial={{ y: "0px" }}
+        animate={{
+          y: "1rem",
+        }}
+        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
+      />
+      <motion.img
+        src="/assets/svg/circle-pink.svg"
+        alt="circle"
+        style={{
+          position: "absolute",
+          top: "2930px",
+          left: "70rem",
+          zIndex: 1,
+          width: "5rem",
         }}
         initial={{ y: "0px" }}
         animate={{
@@ -160,7 +180,7 @@ const Section51 = () => {
   );
 };
 
-export default Section51;
+export default Section41;
 
 const ExpContainer = styled.div`
   .up {
@@ -172,37 +192,43 @@ const ExpContainer = styled.div`
   .line-gap {
     padding-bottom: 1rem;
   }
-  .img {
-    width: 30rem;
-    height: 20.25931rem;
+  .flex-row {
+    display: flex;
+    flex-direction: row;
   }
-  .title-text {
-    color: #fff;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding-bottom: 2rem;
-    z-index: 10;
+  .img {
+    width: 17rem;
   }
   .title-box {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     padding-bottom: 3rem;
+    .title-text {
+      color: #fff;
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
   }
   .info-container {
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 5rem;
     justify-content: space-between;
+    margin-bottom: -13rem;
+    .content {
+      width: 45rem;
+    }
     .info-box {
       display: flex;
       flex-direction: row;
       padding-top: 2rem;
       padding-bottom: 3rem;
       gap: 2rem;
+      width: 45rem;
       .info-col {
         display: flex;
         flex-direction: column;
