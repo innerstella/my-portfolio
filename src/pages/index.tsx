@@ -6,6 +6,12 @@ import Section4 from "./Section4";
 import Section5 from "./Section5";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
+import Mobile1 from "./mobile/section1/Mobile1";
+import Mobile2 from "./mobile/section2/Mobile2";
+import Mobile3 from "./mobile/section3/Mobile3";
+import Mobile4 from "./mobile/section4/Mobile4";
+import Mobile5 from "./mobile/section5/Mobile5";
+import MobileFooter from "../components/MobileFooter";
 
 const HomePage = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -32,7 +38,14 @@ const HomePage = () => {
           <Section5 />
         </>
       ) : (
-        <p>mobile view</p>
+        <>
+          <Mobile1 />
+          <Mobile2 />
+          <Mobile3 />
+          <Mobile4 />
+          <Mobile5 />
+          <MobileFooter />
+        </>
       )}
 
       <Footer />
