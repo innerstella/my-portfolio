@@ -25,7 +25,7 @@ const Footer = () => {
         </span>
       </div>
 
-      <p className="section-p-light">© Cha Su Ji. Last Updated 23.09.12.</p>
+      <p className="section-p-light">© Cha Su Ji. Last Updated 23.09.16.</p>
     </MainContainer>
   );
 };

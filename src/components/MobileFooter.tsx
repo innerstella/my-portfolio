@@ -24,7 +24,7 @@ const MobileFooter = () => {
         </span>
       </div>
 
-      <p className="mobile-p-light">© Cha Su Ji. Last Updated 23.09.12.</p>
+      <p className="mobile-p-light">© Cha Su Ji. Last Updated 23.09.16.</p>
     </MainContainer>
   );
 };
