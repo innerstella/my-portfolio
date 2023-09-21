@@ -37,7 +37,7 @@ const Mobile3 = () => {
                   x: ["-10vw", "65vw"],
                 }}
                 transition={{
-                  duration: 3,
+                  duration: 1,
                   delay: 0,
                 }}
               />
@@ -50,7 +50,7 @@ const Mobile3 = () => {
                   x: ["-10vw", "45vw"],
                 }}
                 transition={{
-                  duration: 3,
+                  duration: 1,
                   delay: 0.2,
                 }}
               />
@@ -63,7 +63,7 @@ const Mobile3 = () => {
                   x: ["-10vw", "25vw"],
                 }}
                 transition={{
-                  duration: 3,
+                  duration: 1,
                   delay: 0.4,
                 }}
               />
@@ -76,7 +76,7 @@ const Mobile3 = () => {
                   x: ["-10vw", "5vw"],
                 }}
                 transition={{
-                  duration: 3,
+                  duration: 1,
                   delay: 0.6,
                 }}
               />
@@ -91,7 +91,7 @@ const Mobile3 = () => {
                   x: ["-10vw", "55vw"],
                 }}
                 transition={{
-                  duration: 3,
+                  duration: 1,
                   delay: 0,
                 }}
               />
@@ -104,7 +104,7 @@ const Mobile3 = () => {
                   x: ["-10vw", "35vw"],
                 }}
                 transition={{
-                  duration: 3,
+                  duration: 1,
                   delay: 0.1,
                 }}
               />
@@ -117,7 +117,7 @@ const Mobile3 = () => {
                   x: ["-10vw", "15vw"],
                 }}
                 transition={{
-                  duration: 3,
+                  duration: 1,
                   delay: 0.3,
                 }}
               />
