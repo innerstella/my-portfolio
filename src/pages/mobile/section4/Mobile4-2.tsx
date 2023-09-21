@@ -1,12 +1,55 @@
+import { useEffect, useState } from "react";
+
 import { styled } from "styled-components";
+import { motion } from "framer-motion";
+
 import MobileSubtitle from "../../../components/MobileSubTitle";
+import { LineContainerMobile } from "../../../components/Line";
 
 const Mobile42 = () => {
+  // line scroll
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY > 2000 && window.scrollY < 5000) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <MainContainer>
       <div className="title-box">
-        <p className="title-text">고려대학교 NEXT X 멋쟁이사자처럼 10기</p>
+        <p className="title-text">
+          고려대학교 NEXT
+          <br />X 멋쟁이사자처럼 10기
+        </p>
       </div>
+      <LineContainerMobile>
+        <div className="red"></div>
+        {isScrolled ? (
+          <motion.div
+            initial={{ opacity: 1, x: 0 }} // 초기 상태
+            animate={{ opacity: 1, x: "10vw" }} // 애니메이션 상태
+            exit={{ opacity: 0, x: "10vw" }}
+            transition={{
+              duration: 3,
+            }}
+            className="yellow"
+          />
+        ) : (
+          <div className="yellow fixed"></div>
+        )}
+      </LineContainerMobile>
       <div className="info-container">
         <div>
           <p className="mobile-p-light content">
@@ -62,7 +105,6 @@ const MainContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding-bottom: 1rem;
     .title-text {
       color: #fff;
       font-size: 1.4rem;

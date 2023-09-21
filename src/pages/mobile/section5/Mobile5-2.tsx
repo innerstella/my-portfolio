@@ -1,8 +1,12 @@
+import { useEffect, useState } from "react";
+
 import { styled } from "styled-components";
 import { motion } from "framer-motion";
+
 import MobileButton from "../../../components/MobileButton";
 import MobileSubtitle from "../../../components/MobileSubTitle";
 import MobileSwiper from "../../../components/MobileSwiper";
+import { LineContainerMobile } from "../../../components/Line";
 
 const Mobile52 = () => {
   const onClick = (num: number) => {
@@ -24,15 +28,47 @@ const Mobile52 = () => {
       );
   };
 
+  // line scroll
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY > 4300 && window.scrollY < 8000) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <MainContainer>
       <div className="title-box">
         <p className="title-text">맛집 검색기</p>
-      </div>
-      <div className="flex-row">
         <MobileButton type={1} onClick={() => onClick(1)} />
       </div>
-
+      <LineContainerMobile>
+        <div className="blue"></div>
+        {isScrolled ? (
+          <motion.div
+            initial={{ opacity: 1, x: 0 }} // 초기 상태
+            animate={{ opacity: 1, x: "10vw" }} // 애니메이션 상태
+            exit={{ opacity: 0, x: "10vw" }}
+            transition={{
+              duration: 3,
+            }}
+            className="gray"
+          />
+        ) : (
+          <div className="gray fixed"></div>
+        )}
+      </LineContainerMobile>
       <div className="info-container">
         <div>
           <div className="info-box">
@@ -141,7 +177,6 @@ const MainContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding-bottom: 1rem;
     .title-text {
       color: #fff;
       font-size: 1.4rem;
@@ -165,7 +200,6 @@ const MainContainer = styled.div`
     .info-box {
       display: flex;
       flex-direction: row;
-      padding-top: 2rem;
       padding-bottom: 2rem;
       gap: 2rem;
       width: 45rem;

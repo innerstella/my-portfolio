@@ -1,12 +1,35 @@
+import { useEffect, useState } from "react";
+
 import { styled } from "styled-components";
 import { motion } from "framer-motion";
+
 import MobileButton from "../../../components/MobileButton";
 import MobileSubtitle from "../../../components/MobileSubTitle";
+import { LineContainerMobile } from "../../../components/Line";
 
 const Mobile41 = () => {
   const onClick = (num: number) => {
     num === 1 && window.open("https://yeonpick.kr/");
   };
+
+  // line scroll
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY > 530 && window.scrollY < 3000) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <MainContainer>
@@ -14,6 +37,22 @@ const Mobile41 = () => {
         <p className="title-text">연픽</p>
         <MobileButton type={1} onClick={() => onClick(1)} />
       </div>
+      <LineContainerMobile>
+        <div className="purple"></div>
+        {isScrolled ? (
+          <motion.div
+            initial={{ opacity: 1, x: 0 }} // 초기 상태
+            animate={{ opacity: 1, x: "10vw" }} // 애니메이션 상태
+            exit={{ opacity: 0, x: "10vw" }}
+            transition={{
+              duration: 3,
+            }}
+            className="pink"
+          />
+        ) : (
+          <div className="pink fixed"></div>
+        )}
+      </LineContainerMobile>
       <div className="info-container">
         <div>
           <p className="mobile-p-light content">
@@ -116,7 +155,6 @@ const MainContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding-bottom: 1rem;
     .title-text {
       color: #fff;
       font-size: 1.4rem;

@@ -18,7 +18,7 @@ export default MobileSubtitle;
 
 const Container = styled.div`
   border-left: 0.5rem solid white;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   .text {
     padding-left: 1.2rem;
     color: #fff;

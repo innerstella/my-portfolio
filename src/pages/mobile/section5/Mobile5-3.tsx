@@ -1,8 +1,12 @@
+import { useEffect, useState } from "react";
+
 import { styled } from "styled-components";
 import { motion } from "framer-motion";
+
 import MobileButton from "../../../components/MobileButton";
 import MobileSubtitle from "../../../components/MobileSubTitle";
 import MobileSwiper from "../../../components/MobileSwiper";
+import { LineContainerMobile } from "../../../components/Line";
 
 const Mobile53 = () => {
   const onClick = (num: number) => {
@@ -14,11 +18,46 @@ const Mobile53 = () => {
       );
   };
 
+  // line scroll
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY > 5300 && window.scrollY < 8000) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <MainContainer>
       <div className="title-box">
         <p className="title-text">훠궈 소스 백과사전</p>
       </div>
+      <LineContainerMobile>
+        <div className="red"></div>
+        {isScrolled ? (
+          <motion.div
+            initial={{ opacity: 1, x: 0 }} // 초기 상태
+            animate={{ opacity: 1, x: "10vw" }} // 애니메이션 상태
+            exit={{ opacity: 0, x: "10vw" }}
+            transition={{
+              duration: 3,
+            }}
+            className="yellow"
+          />
+        ) : (
+          <div className="yellow fixed"></div>
+        )}
+      </LineContainerMobile>
       <div className="flex-row">
         <MobileButton type={1} onClick={() => onClick(1)} />
         <MobileButton type={2} onClick={() => onClick(2)} />
@@ -93,6 +132,7 @@ const MainContainer = styled.div`
     display: flex;
     flex-direction: row;
     gap: 2vw;
+    margin-bottom: 1rem;
   }
   .padding {
     padding-bottom: 5vw;
@@ -140,7 +180,6 @@ const MainContainer = styled.div`
     .info-box {
       display: flex;
       flex-direction: row;
-      padding-top: 2rem;
       padding-bottom: 2rem;
       gap: 2rem;
       width: 45rem;

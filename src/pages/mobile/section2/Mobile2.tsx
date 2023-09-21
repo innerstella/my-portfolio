@@ -50,6 +50,14 @@ const Mobile2 = () => {
         />
         <p className="mobile-p pointer">https://inner-stella.tistory.com</p>
       </div>
+      <motion.img
+        src="/assets/png/img-blog.png"
+        alt="blog"
+        className="img pointer"
+        onClick={() => onClick(2)}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      />
     </MainContainer>
   );
 };
@@ -68,5 +76,8 @@ const MainContainer = styled.div`
     .text-svg {
       width: 1rem;
     }
+  }
+  .img {
+    width: 80vw;
   }
 `;

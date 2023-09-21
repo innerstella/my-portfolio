@@ -1,14 +1,8 @@
 import { useEffect, useState } from "react";
 import { styled } from "styled-components";
 
-// 브라우저
-import Mobile1 from "./mobile/section1/Mobile1";
-import Mobile2 from "./mobile/section2/Mobile2";
-import Mobile3 from "./mobile/section3/Mobile3";
-import Mobile4 from "./mobile/section4/Mobile4";
-import Mobile5 from "./mobile/section5/Mobile5";
-import MobileFooter from "../components/MobileFooter";
 import Web from "./web";
+import Mobile from "./mobile";
 
 const HomePage = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -25,22 +19,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <MainContainer>
-      {windowWidth > 1000 ? (
-        <>
-          <Web />
-        </>
-      ) : (
-        <>
-          <Mobile1 />
-          <Mobile2 />
-          <Mobile3 />
-          <Mobile4 />
-          <Mobile5 />
-          <MobileFooter />
-        </>
-      )}
-    </MainContainer>
+    <MainContainer>{windowWidth > 1000 ? <Web /> : <Mobile />}</MainContainer>
   );
 };
 
@@ -52,6 +31,7 @@ const MainContainer = styled.div`
   background-color: #1e204f;
   align-content: center;
   overflow-x: hidden;
+  overflow-y: auto;
 `;
 
 // const HomePage = () => {

@@ -1,7 +1,11 @@
+import { useEffect, useState } from "react";
+
 import { styled } from "styled-components";
 import { motion } from "framer-motion";
+
 import MobileButton from "../../../components/MobileButton";
 import MobileSubtitle from "../../../components/MobileSubTitle";
+import { LineContainerMobile } from "../../../components/Line";
 
 const Mobile51 = () => {
   const onClick = (num: number) => {
@@ -12,6 +16,25 @@ const Mobile51 = () => {
       );
   };
 
+  // line scroll
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY > 2900 && window.scrollY < 6000) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <MainContainer>
       <div className="title-box">
@@ -21,7 +44,22 @@ const Mobile51 = () => {
         <MobileButton type={1} onClick={() => onClick(1)} />
         <MobileButton type={3} onClick={() => onClick(2)} />
       </div>
-
+      <LineContainerMobile>
+        <div className="red"></div>
+        {isScrolled ? (
+          <motion.div
+            initial={{ opacity: 1, x: 0 }} // 초기 상태
+            animate={{ opacity: 1, x: "10vw" }} // 애니메이션 상태
+            exit={{ opacity: 0, x: "10vw" }}
+            transition={{
+              duration: 3,
+            }}
+            className="yellow"
+          />
+        ) : (
+          <div className="yellow fixed"></div>
+        )}
+      </LineContainerMobile>
       <div className="info-container">
         <div>
           <div className="info-box">
