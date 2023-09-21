@@ -18,6 +18,14 @@ const HomePage = () => {
     };
   }, []);
 
+  // // 로깅
+  // useEffect(() => {
+  //   // 페이지 또는 이벤트 로깅
+  //   analytics.logEvent('page_view', {
+  //     page_path: window.location.pathname,
+  //   });
+  // }, []);
+
   return (
     <MainContainer>{windowWidth > 1000 ? <Web /> : <Mobile />}</MainContainer>
   );
