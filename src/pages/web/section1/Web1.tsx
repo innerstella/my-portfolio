@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import { motion } from "framer-motion";
-const Section1 = () => {
+
+const Web1 = () => {
   return (
     <>
       <MainContainer>
@@ -215,7 +216,7 @@ const Section1 = () => {
   );
 };
 
-export default Section1;
+export default Web1;
 
 const MainContainer = styled.div`
   display: flex;

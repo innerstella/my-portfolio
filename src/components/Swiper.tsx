@@ -86,7 +86,7 @@ export default DisplaySwiper;
 
 const MainContainer = styled.div`
   .frame {
-    width: 19.2rem;
+    width: 20vw;
     z-index: 5;
     position: relative;
     top: -36.5rem;
@@ -95,9 +95,9 @@ const MainContainer = styled.div`
 `;
 
 const SwiperContainer = styled.div`
-  width: 17rem;
+  width: 17vw;
   background-color: #fafafa;
-  height: 35.5rem;
+  height: 60vh;
   border-radius: 1rem;
 
   .img {

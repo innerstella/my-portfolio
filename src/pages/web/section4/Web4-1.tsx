@@ -1,12 +1,36 @@
+import { useEffect, useState } from "react";
+
 import { styled } from "styled-components";
-import Subtitle from "../../../components/SubTitle";
-import Button from "../../../components/Button";
 import { motion } from "framer-motion";
 
-const Section41 = () => {
+import Subtitle from "../../../components/SubTitle";
+import Button from "../../../components/Button";
+import { LineContainer } from "../../../components/Line";
+
+const Web41 = () => {
   const onClick = (num: number) => {
     num === 1 && window.open("https://yeonpick.kr/");
   };
+
+  // line scroll
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY > 1300 && window.scrollY < 3000) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <ExpContainer>
@@ -14,6 +38,22 @@ const Section41 = () => {
           <p className="title-text up">연픽</p>
           <Button type={1} onClick={() => onClick(1)} />
         </div>
+        <LineContainer>
+          <div className="purple"></div>
+          {isScrolled ? (
+            <motion.div
+              initial={{ opacity: 1, x: 0 }} // 초기 상태
+              animate={{ opacity: 1, x: "10vw" }} // 애니메이션 상태
+              exit={{ opacity: 0, x: "10vw" }}
+              transition={{
+                duration: 3,
+              }}
+              className="pink"
+            />
+          ) : (
+            <div className="pink fixed"></div>
+          )}
+        </LineContainer>
         <div className="info-container">
           <div>
             <p className="section-p-light content">
@@ -36,7 +76,7 @@ const Section41 = () => {
           </div>
           <motion.img
             src="/assets/png/img-yeonpick.png"
-            alt="rapvi"
+            alt="yeonpick"
             className="img up pointer"
             onClick={() => onClick(1)}
             whileHover={{ scale: 1.1 }}
@@ -80,107 +120,11 @@ const Section41 = () => {
           빠르고 정확한 버그 수정을 위한 CS팀과 개발팀 간 시스템 구축
         </li>
       </ExpContainer>
-      {/* <motion.img
-        src="/assets/svg/circle-purple.svg"
-        alt="circle"
-        style={{
-          position: "absolute",
-          top: "2100px",
-          left: "-5rem",
-          zIndex: 1,
-          width: "13rem",
-        }}
-        initial={{ y: "0px" }}
-        animate={{
-          y: "1rem",
-        }}
-        transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
-      />
-      <motion.img
-        src="/assets/svg/circle-pink.svg"
-        alt="circle"
-        style={{
-          position: "absolute",
-          top: "2050px",
-          left: "5rem",
-          zIndex: 1,
-          width: "7rem",
-        }}
-        initial={{ y: "0px" }}
-        animate={{
-          y: "1rem",
-        }}
-        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
-      /> */}
-      {/* <motion.img
-        src="/assets/svg/circle-purple.svg"
-        alt="circle"
-        style={{
-          position: "absolute",
-          top: "2340px",
-          left: "57rem",
-          zIndex: 1,
-          width: "7rem",
-        }}
-        initial={{ y: "0px" }}
-        animate={{
-          y: "1rem",
-        }}
-        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
-      />
-      <motion.img
-        src="/assets/svg/circle-pink.svg"
-        alt="circle"
-        style={{
-          position: "absolute",
-          top: "2600px",
-          left: "81rem",
-          zIndex: 1,
-          width: "5rem",
-        }}
-        initial={{ y: "0px" }}
-        animate={{
-          y: "1rem",
-        }}
-        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
-      />
-      <motion.img
-        src="/assets/svg/circle-purple.svg"
-        alt="circle"
-        style={{
-          position: "absolute",
-          top: "2900px",
-          left: "74rem",
-          zIndex: 1,
-          width: "10rem",
-        }}
-        initial={{ y: "0px" }}
-        animate={{
-          y: "1rem",
-        }}
-        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
-      />
-      <motion.img
-        src="/assets/svg/circle-pink.svg"
-        alt="circle"
-        style={{
-          position: "absolute",
-          top: "2930px",
-          left: "70rem",
-          zIndex: 1,
-          width: "5rem",
-        }}
-        initial={{ y: "0px" }}
-        animate={{
-          y: "1rem",
-        }}
-        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
-      /> */}
     </>
   );
 };
 
-export default Section41;
+export default Web41;
 
 const ExpContainer = styled.div`
   .up {
@@ -196,15 +140,12 @@ const ExpContainer = styled.div`
     display: flex;
     flex-direction: row;
   }
-  .img {
-    width: 17rem;
-  }
+
   .title-box {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 2rem;
-    padding-bottom: 3rem;
     .title-text {
       color: #fff;
       font-size: 3rem;
@@ -219,6 +160,9 @@ const ExpContainer = styled.div`
     gap: 5rem;
     justify-content: space-between;
     margin-bottom: -13rem;
+    .img {
+      width: 17rem;
+    }
     .content {
       width: 45rem;
     }

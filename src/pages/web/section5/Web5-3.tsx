@@ -1,10 +1,13 @@
+import { useEffect, useState } from "react";
+
 import { styled } from "styled-components";
-import Subtitle from "../../../components/SubTitle";
-import Button from "../../../components/Button";
-import DisplaySwiper from "../../../components/Swiper";
 import { motion } from "framer-motion";
 
-const Section53 = () => {
+import Subtitle from "../../../components/SubTitle";
+import Button from "../../../components/Button";
+import { LineContainer } from "../../../components/Line";
+
+const Web53 = () => {
   const onClick = (num: number) => {
     num === 1 && window.open("https://hotpot-8c321.web.app/");
     num === 2 && window.open("https://github.com/innerstella/hotpot_dict");
@@ -13,16 +16,50 @@ const Section53 = () => {
         "https://inner-stella.tistory.com/entry/%EA%B0%9C%EB%B0%9C%EC%9D%BC%EC%A7%80-%ED%95%98%EC%9D%B4%EB%94%94%EB%9D%BC%EC%98%A4-%ED%9B%A0%EA%B6%88-%EC%86%8C%EC%8A%A4-%EB%B0%B1%EA%B3%BC%EC%82%AC%EC%A0%84"
       );
   };
+  // line scroll
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY > 7200 && window.scrollY < 10000) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
       <ExpContainer>
         <div>
-          <p className="title-text up">훠궈 소스 백과사전</p>
           <div className="title-box">
+            <p className="title-text up">훠궈 소스 백과사전</p>
             <Button type={1} onClick={() => onClick(1)} />
             <Button type={2} onClick={() => onClick(2)} />
             <Button type={3} onClick={() => onClick(3)} />
           </div>
+          <LineContainer>
+            <div className="red"></div>
+            {isScrolled ? (
+              <motion.div
+                initial={{ opacity: 1, x: 0 }} // 초기 상태
+                animate={{ opacity: 1, x: "10vw" }} // 애니메이션 상태
+                exit={{ opacity: 0, x: "10vw" }}
+                transition={{
+                  duration: 3,
+                }}
+                className="yellow"
+              />
+            ) : (
+              <div className="yellow fixed"></div>
+            )}
+          </LineContainer>
           <div className="info-container">
             <div>
               <div className="info-box">
@@ -44,18 +81,17 @@ const Section53 = () => {
                 보여주는 서비스
               </p>
             </div>
-            <motion.div
+            <motion.img
+              src="/assets/png/img-michelin.png"
+              alt="michelin"
+              className="img up pointer"
+              onClick={() => onClick(1)}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              style={{ zIndex: "10" }}
-              onClick={() => onClick(1)}
-              className="pointer"
-            >
-              <DisplaySwiper type={4} />
-            </motion.div>{" "}
+            />
           </div>
           <div className="margin"></div>
-          <div style={{ marginTop: "-50rem" }}>
+          <div>
             <div className="btns">
               <Subtitle content="Version 2.0" />
             </div>
@@ -81,107 +117,11 @@ const Section53 = () => {
           </div>
         </div>
       </ExpContainer>
-      {/* <motion.img
-        src="/assets/svg/circle-red.svg"
-        alt="circle"
-        style={{
-          position: "absolute",
-          top: "8350px",
-          left: "-5rem",
-          zIndex: 1,
-          width: "13rem",
-        }}
-        initial={{ y: "0px" }}
-        animate={{
-          y: "1rem",
-        }}
-        transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
-      />
-      <motion.img
-        src="/assets/svg/circle-pink.svg"
-        alt="circle"
-        style={{
-          position: "absolute",
-          top: "8340px",
-          left: "5rem",
-          zIndex: 1,
-          width: "7rem",
-        }}
-        initial={{ y: "0px" }}
-        animate={{
-          y: "1rem",
-        }}
-        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
-      />
-      <motion.img
-        src="/assets/svg/circle-pink.svg"
-        alt="circle"
-        style={{
-          position: "absolute",
-          top: "8540px",
-          left: "55rem",
-          zIndex: 0,
-          width: "7rem",
-        }}
-        initial={{ y: "0px" }}
-        animate={{
-          y: "1rem",
-        }}
-        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
-      />
-      <motion.img
-        src="/assets/svg/circle-red.svg"
-        alt="circle"
-        style={{
-          position: "absolute",
-          top: "8800px",
-          left: "81rem",
-          zIndex: 1,
-          width: "5rem",
-        }}
-        initial={{ y: "0px" }}
-        animate={{
-          y: "1rem",
-        }}
-        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
-      />
-      <motion.img
-        src="/assets/svg/circle-pink.svg"
-        alt="circle"
-        style={{
-          position: "absolute",
-          top: "9100px",
-          left: "73rem",
-          zIndex: 0,
-          width: "10rem",
-        }}
-        initial={{ y: "0px" }}
-        animate={{
-          y: "1rem",
-        }}
-        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
-      />
-      <motion.img
-        src="/assets/svg/circle-red.svg"
-        alt="circle"
-        style={{
-          position: "absolute",
-          top: "9170px",
-          left: "70rem",
-          zIndex: 0,
-          width: "5rem",
-        }}
-        initial={{ y: "0px" }}
-        animate={{
-          y: "1rem",
-        }}
-        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
-      /> */}
     </>
   );
 };
 
-export default Section53;
+export default Web53;
 
 const ExpContainer = styled.div`
   .up {
@@ -189,6 +129,9 @@ const ExpContainer = styled.div`
   }
   .margin {
     height: 4rem;
+  }
+  .img {
+    width: 17rem;
   }
   .line-gap {
     padding-bottom: 1rem;
@@ -203,14 +146,12 @@ const ExpContainer = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding-bottom: 2rem;
   }
   .title-box {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 2rem;
-    padding-bottom: 3rem;
   }
   .info-container {
     display: flex;

@@ -1,17 +1,14 @@
-import { styled } from "styled-components";
-import Section1 from "./web/Section1";
-import Section2 from "./web/Section2";
-import Section3 from "./web/Section3";
-import Section4 from "./web/Section4";
-import Section5 from "./web/Section5";
-import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
+import { styled } from "styled-components";
+
+// 브라우저
 import Mobile1 from "./mobile/section1/Mobile1";
 import Mobile2 from "./mobile/section2/Mobile2";
 import Mobile3 from "./mobile/section3/Mobile3";
 import Mobile4 from "./mobile/section4/Mobile4";
 import Mobile5 from "./mobile/section5/Mobile5";
 import MobileFooter from "../components/MobileFooter";
+import Web from "./web";
 
 const HomePage = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -31,12 +28,7 @@ const HomePage = () => {
     <MainContainer>
       {windowWidth > 1000 ? (
         <>
-          <Section1 />
-          <Section2 />
-          <Section3 />
-          <Section4 />
-          <Section5 />
-          <Footer />
+          <Web />
         </>
       ) : (
         <>
