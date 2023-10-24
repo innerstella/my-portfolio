@@ -6,6 +6,59 @@
   --green: #00bb13;
   --blue: #00a7dc;
   --gray: #d9d9d9;
+  /* version2 */
+  --gray100: #fafafa;
+  --gray300: #bdbdbd;
+  --gray500: #464646;
+  --white: #ffffff;
+}
+
+/* version2 font*/
+.title {
+  color: #000;
+  text-align: center;
+  font-family: SUIT Variable;
+  font-size: 3.125rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.subtitle {
+  color: #000;
+  font-family: SUIT Variable;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.subsubtitle {
+  color: #000;
+  text-align: center;
+  font-family: SUIT Variable;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.text {
+  color: #000;
+  text-align: center;
+  font-family: SUIT Variable;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* version2 gap*/
+.mt100 {
+  margin-top: 100px;
+}
+.mt50 {
+  margin-top: 50px;
+}
+.mt30 {
+  margin-top: 30px;
 }
 
 .pointer {
