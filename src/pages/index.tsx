@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 
 import Web from "./web";
 import Mobile from "./mobile";
+import Version2 from "./version2";
 
 const HomePage = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -27,16 +28,20 @@ const HomePage = () => {
   // }, []);
 
   return (
-    <MainContainer>{windowWidth > 1000 ? <Web /> : <Mobile />}</MainContainer>
+    // <MainContainer>{windowWidth > 1000 ? <Web /> : <Mobile />}</MainContainer>
+    <MainContainer>
+      <Version2 />
+    </MainContainer>
   );
 };
 
 export default HomePage;
 
 const MainContainer = styled.div`
-  height: 100%;
+  height: 100vh;
   width: 100vw;
-  background-color: #1e204f;
+  padding: 25px;
+  background-color: var(--gray100);
   align-content: center;
   overflow-x: hidden;
   overflow-y: auto;
