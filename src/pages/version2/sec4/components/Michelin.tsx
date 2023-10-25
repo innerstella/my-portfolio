@@ -62,7 +62,7 @@ const Michelin = () => {
         </div>
         <div className="flex-col">
           <div className="box">
-            <p className="subtitle">🍽️ 맛집 검색기</p>
+            <p className="subtitle">🍽️ K-POP 맛집 검색기</p>
             <p className="text mt10">
               💬 일 평균 2000명의 유저가 사용하는 아이돌 맛집 해시태그 기반으로
               검색창에 장소/메뉴를 입력하면 해당 장소/메뉴에 대한 맛집에 대해
