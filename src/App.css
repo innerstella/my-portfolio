@@ -16,7 +16,6 @@
 /* version2 font*/
 .title {
   color: #000;
-  text-align: center;
   font-family: SUIT Variable;
   font-size: 3.125rem;
   font-style: normal;
@@ -33,7 +32,6 @@
 }
 .subsubtitle {
   color: #000;
-  text-align: center;
   font-family: SUIT Variable;
   font-size: 1.5rem;
   font-style: normal;
@@ -42,23 +40,32 @@
 }
 .text {
   color: #000;
-  text-align: center;
+  /* text-align: center; */
   font-family: SUIT Variable;
   font-size: 1.25rem;
   font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  font-weight: 400;
+  line-height: 180%;
+}
+.center {
+  text-align: center;
 }
 
 /* version2 gap*/
 .mt100 {
   margin-top: 100px;
 }
+.mt70 {
+  margin-top: 70px;
+}
 .mt50 {
   margin-top: 50px;
 }
 .mt30 {
   margin-top: 30px;
+}
+.mt10 {
+  margin-top: 10px;
 }
 
 .pointer {
