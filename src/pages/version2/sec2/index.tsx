@@ -23,7 +23,7 @@ const Sec2 = () => {
           onClick={() => moveTo("tistory")}
         />
       </div>
-      <div className="box mt50">
+      <div className="box mt50 text">
         <p>
           📞 010-2640-1655
           <br />

@@ -11,11 +11,11 @@ const Sec1 = () => {
       />
       <p className="subsubtitle mt30">일단 만들어보며 배우는 개발자</p>
       <p className="title mt30">차수지 입니다</p>
-      <div className="box mt30">
+      <div className="box mt30 text">
         <p>
           직접 만들어보며 공부하는 것을 좋아하는 프론트엔드 개발자입니다.
           <br />
-          개발자의 가치는 사용자의 일상 생활을 더 재미있고
+          개발자의 가치는 사용자의 일상 생활을 더 재미있고,
           <br />
           편리하게 만드는 데서 온다고 생각합니다.
           <br />
