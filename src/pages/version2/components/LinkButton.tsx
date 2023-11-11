@@ -37,7 +37,7 @@ const Box = styled.div`
   background: var(--white100, #fff);
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
   padding: 10px;
-  width: 20vw;
+  width: 330px;
 
   display: flex;
   flex-direction: row;
