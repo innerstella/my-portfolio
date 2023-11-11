@@ -17,7 +17,7 @@ const Sec2 = () => {
           onClick={() => moveTo("github")}
         />
         <img
-          src="/assets/svg/ic-tistory.svg"
+          src="/assets/png/img-tistory.png"
           alt="tistory"
           className="logo pointer"
           onClick={() => moveTo("tistory")}
@@ -25,11 +25,11 @@ const Sec2 = () => {
       </div>
       <div className="box mt50 text">
         <p>
-          📞 010-2640-1655
+          📞 &nbsp;&nbsp;010-2640-1655
           <br />
-          📧 suji0509@naver.com
+          📧 &nbsp;&nbsp;suji0509@naver.com
           <br />
-          🎓 고려대학교 지구환경과학과/인공지능학과
+          🎓 &nbsp;&nbsp;고려대학교 지구환경과학과/인공지능학과
         </p>
       </div>
       <div className="mt50 flex-row">
@@ -48,11 +48,11 @@ const Sec2 = () => {
           alt="react"
           className="logo"
         />
-        <img
+        {/* <img
           src="/assets/png/img-logo-nextjs.png"
           alt="nextjs"
           className="logo"
-        />
+        /> */}
         <img
           src="/assets/png/img-logo-firebase.png"
           alt="firebase"

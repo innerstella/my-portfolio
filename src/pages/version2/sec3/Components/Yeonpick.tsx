@@ -47,42 +47,50 @@ const Yeonpick = () => {
           </div>
         </div>
         <div className="box">
-          <p className="subtitle">💌 연픽</p>
+          <p className="subtitle">💌 &nbsp;연픽</p>
           <p className="text mt10">
-            💬 3만 유저가 사용하는 대학생 소개팅∙미팅 매칭 서비스
+            <br />
+            💬 &nbsp;3만 유저가 사용하는 대학생 소개팅∙미팅 매칭 서비스
             <br />
             <br />
             Period | 23.04. ~ 23.08.
             <br />
-            Position | 프론트엔드 웹 개발
+            Position | 웹 프론트엔드 개발
             <br />
             Tech | Next.js, React, TypeScript, Firestore, Redux, React Query
-          </p>
-          <p className="subsubtitle mt30">✔️ 리팩터링</p>
-          <p className="mt10 text">
-            - React 기반의 Next.js 개발 환경 구축
             <br />
-            - Redux, React Query 활용
-            <br />- 신규 기술 스택 및 개발 환경 관련 내부 문서 작성
-          </p>
-          <p className="subsubtitle mt30">✔️ 기능 개발/기획</p>
-          <p className="mt10 text">
-            - 리뷰 작성 시 코인 지급 기능 개발
             <br />
-            - 매칭된 상대방의 매너를 평가하는 기능 개발
-            <br />- 홈화면에서 유저의 CTA 버튼 클릭률을 높이기 위한 A/B Testing
-            진행
-            <br />- 매칭률 상승을 위한 프로필 확인 페이지 개선
           </p>
-          <p className="subsubtitle mt30">✔️ 개발팀 협업 체계 정리 및 문서화</p>
+          <p className="subsubtitle mt30">🚚 &nbsp;프로젝트 이관</p>
           <p className="mt10 text">
-            - 팀 내 효과적인 협업 및 정보 공유를 위한 사내 위키 작성 및 컨벤션
-            정립
-            <br />
-            - 신규 입사자의 빠른 적응을 위한 온보딩 문서 작성
-            <br />- 안정적인 신규 기능 배포를 위한 QA 시스템 도입 및 내부 세션
-            진행
-            <br />- 빠르고 정확한 버그 수정을 위한 CS팀-개발팀 시스템 구축
+            팀에 합류하게 되며 기존에 React 기반으로 개발되어 있던 프로젝트를
+            Next.js로 이관하는 작업을 진행하였습니다. 팀 내에서 프로젝트 내
+            코드를 함께 정리하고 업데이트하고자 하였기 때문에 해당 작업을
+            진행하였습니다. SEO를 향상시키고 초기 로딩 속도를 개선하기 위해
+            Next.js를 선택하였으며, 다소 난잡해게 관리되던 클라이언트 상태를
+            Redux와 React Query를 사용하여 정리하였습니다. UI 개발 측면에서는
+            해당 과정 속에서 빠르게 변화하는 기획에 개발 속도를 맞출 수 있도록
+            컴포넌트의 재사용을 높일 수 있도록 코드를 수정하였습니다.
+          </p>
+          <p className="subsubtitle mt30">🧪 &nbsp;기능 개발 및 A/B 테스트</p>
+          <p className="mt10 text">
+            리뷰 작성 시 코인 지급, 매칭된 상대방의 매너를 평가하는 기능을
+            개발했습니다. 또한, 홈화면에서 유저의 CTA 버튼 클릭률을 높이기
+            위하여 A/B 테스트를 진행했습니다. 유저가 어떠한 캐치 프레이즈에 더
+            반응하는지를 파악하기 위해 두 가지 시안을 제작한 후, 이에 맞는 유저
+            배분 계획을 세워 일정 기간 동안 시안 별 버튼 클릭률을 집계했습니다.
+            이 결과를 바탕으로 유저가 서비스에 기대하는 방향을 파악할 수
+            있었습니다.
+          </p>
+          <p className="subsubtitle mt30">🗃️ &nbsp;문서화</p>
+          <p className="mt10 text">
+            팀에 합류했을 당시 프로젝트에 대한 문서가 충분하지 않았기 때문에,
+            팀에 적응하고 업무를 빠르게 진행하는 것에 어려움을 느꼈습니다. 이를
+            개선하고자 팀 내 효과적인 협업 및 정보 공유를 위해 사내 위키를
+            작성했습니다. 이 외에도 다음에 합류하는 팀원을 위해 빠른 적응을 할
+            수 있도록 온보딩 문서를 작성했으며, 기능 버그 파악 및 수정을 위한
+            협업 방식, 안정적인 신규 기능 배포를 위한 QA 방식을 팀에 입히기 위해
+            노력했습니다.
           </p>
         </div>
       </MainContainer>
