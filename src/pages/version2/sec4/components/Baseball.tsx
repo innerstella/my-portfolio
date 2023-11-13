@@ -76,6 +76,13 @@ const Baseball = () => {
             유저들의 피드백을 받아 2군 경기, 타팀 경기 또한 기록할 수 있는
             기능을 개발 중 입니다.
           </p>
+          <p className="subsubtitle mt30">🤓 &nbsp;배운 점</p>
+          <p className="mt10 text">
+            <li>OAuth의 작동 방식을 이해할 수 있었습니다.</li>
+            <li>
+              NoSQL 데이터베이스를 이용해 사용자의 정보를 관리해보았습니다.
+            </li>
+          </p>
         </div>
       </MainContainer>
     </div>

@@ -10,7 +10,7 @@ const Sec3 = () => {
       <p className="title mt100">Experiences</p>
       <Yeonpick />
       <Rapvi />
-      <Likelion />
+      {/* <Likelion /> */}
       <div className="mt50">
         <VerticalLine />
       </div>

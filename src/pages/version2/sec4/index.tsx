@@ -11,8 +11,8 @@ const Sec4 = () => {
       <p className="title mt100">Projects</p>
       <Michelin />
       <Baseball />
-      <Lucky />
       <Hotpot />
+      <Lucky />
       <div className="mt100"></div>
     </MainContainer>
   );

@@ -69,6 +69,11 @@ const Hotpot = () => {
             향상시켰습니다. 또한 늘어난 소스 레시피 정보들을 저장하기 위해서
             Google Firestore를 활용했습니다.
           </p>
+          <p className="subsubtitle mt30">🤓 &nbsp;배운 점</p>
+          <p className="mt10 text">
+            <li>React와 styled-components에 익숙해질 수 있었습니다.</li>
+            <li>NoSQL 데이터베이스를 이용하여 데이터를 관리해보았습니다.</li>
+          </p>
         </div>
       </MainContainer>
     </div>

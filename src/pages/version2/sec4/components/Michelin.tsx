@@ -110,6 +110,19 @@ const Michelin = () => {
               depth를 줄였습니다.
             </p>
             <img src="/assets/png/img-michelin-graph-2.png" alt="graph" />
+            <p className="subsubtitle mt30">🤓 &nbsp;배운 점</p>
+            <p className="mt10 text">
+              <li>
+                처음으로 기획, 디자인, 개발을 혼자 맡아 프로젝트를 완성했습니다.
+              </li>
+              <li>
+                실 사용자가 있는 서비스를 개발할 때의 뿌듯함을 알 수 있었습니다.
+              </li>
+              <li>
+                리팩터링을 통해 유연한 컴포넌트를 작성하는 것의 중요성을 알 수
+                있었습니다.
+              </li>
+            </p>
           </div>
         </div>
       </MainContainer>
