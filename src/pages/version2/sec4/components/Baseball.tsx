@@ -63,7 +63,9 @@ const Baseball = () => {
             플랫폼을 검색해보았지만 직관 내용을 기록하는 플랫폼은 없었기에 제가
             직접 만들어보기로 했습니다.
           </p>
-          <p className="subsubtitle mt30">⚙️ &nbsp;기능 개발</p>
+          <p className="subsubtitle mt30">
+            ⚙️ &nbsp;기능 개발 : 소셜 로그인, 아카이빙, 승률 계산
+          </p>
           <p className="mt10 text">
             백엔드 개발자가 없는 상황이었기 때문에 Google Firebase에서 제공하는
             소셜 로그인 기능을 이용하여 로그인 기능을 구현하였습니다. ‘기록하기'

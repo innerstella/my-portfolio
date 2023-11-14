@@ -56,7 +56,9 @@ const Lucky = () => {
             문항을 한 곳에서 동시에 작성하며 이 때 문항마다 다른 글자수도
             체크하고 싶었습니다.
           </p>
-          <p className="subsubtitle mt30">⚙️ &nbsp;기능 개발</p>
+          <p className="subsubtitle mt30">
+            ⚙️ &nbsp;기능 개발 : 문항 별 글자수 세기 & 브라우저에 저장
+          </p>
           <p className="mt10 text">
             1) 한 페이지 내에서 여러 문항을 작성할 수 있게 하는 것과 2) 문항 별
             글자수를 다르게 설정할 수 있게 하는 것을 주요 기능으로 두고 개발을
