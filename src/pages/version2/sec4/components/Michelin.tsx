@@ -39,6 +39,12 @@ const Michelin = () => {
     link: "https://inner-stella.tistory.com/entry/%ED%8A%B8%EC%9C%84%ED%84%B0-%EB%A7%9B%EC%A7%91-%EA%B2%80%EC%83%89%EA%B8%B0-%EA%B0%9C%EB%B0%9C%EC%9D%BC%EC%A7%80",
   };
 
+  const content7 = {
+    where: "tistory",
+    text: "웹 접근성 높이기 (Lighthouse)",
+    link: "https://inner-stella.tistory.com/entry/%EC%9B%B9-%EC%A0%91%EA%B7%BC%EC%84%B1-%EB%86%92%EC%9D%B4%EA%B8%B0-w-%EA%B8%B0%EC%A1%B4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A6%AC%ED%8C%A9%ED%84%B0%EB%A7%81-Lighthouse",
+  };
+
   return (
     <div className="mt50">
       <MainContainer>
@@ -53,6 +59,7 @@ const Michelin = () => {
           />
           <div className="flex-left">
             <LinkButton content={content1} />
+            <LinkButton content={content7} />
             <LinkButton content={content2} />
             <LinkButton content={content3} />
             <LinkButton content={content4} />
@@ -110,6 +117,13 @@ const Michelin = () => {
               depth를 줄였습니다.
             </p>
             <img src="/assets/png/img-michelin-graph-2.png" alt="graph" />
+            <p className="subsubtitle mt30">😎 &nbsp; 웹 접근성 고려</p>
+            <p className="mt10 text">
+              Chrome 개발자 도구 Lighthouse를 이용해 웹 접근성을 개선했습니다.
+              디자이너 없이 작업했다보니 색상 부분에서 충분한 색상 대비를
+              제공하지 못한 문제가 발생했고, 이 부분을 수정하여 저대비 텍스트를
+              읽기 어려운 사용자들도 불편함 없이 이용할 수 있도록 개선했습니다.
+            </p>
             <p className="subsubtitle mt30">🤓 &nbsp;배운 점</p>
             <p className="mt10 text">
               <li>

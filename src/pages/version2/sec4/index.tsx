@@ -4,11 +4,13 @@ import Michelin from "./components/Michelin";
 import Baseball from "./components/Baseball";
 import Lucky from "./components/Lucky";
 import Hotpot from "./components/Hotpot";
+import Sancheck from "./components/Sancheck";
 
 const Sec4 = () => {
   return (
     <MainContainer>
       <p className="title mt100">Projects</p>
+      <Sancheck />
       <Michelin />
       <Baseball />
       <Hotpot />
