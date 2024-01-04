@@ -5,7 +5,7 @@ const Sec1 = () => {
   return (
     <MainContainer>
       <img
-        src="/assets/png/img-profile-bubble.png"
+        src="/assets/webp/img-profile-bubble.webp"
         alt="profile img"
         className="logo mt100"
       />
@@ -15,7 +15,7 @@ const Sec1 = () => {
       <p className="title mt30">차수지 입니다</p>
       <div className="box mt30 text">
         <p>
-          일상생활 속에서 사람들의 요구 사항을 빠르게 발견하고, 창의적인
+          일상생활 속에서 사람들의 요구 사항을 빠르게 발견하고, 새로운
           아이디어를 통해 문제를 해결하는 것을 좋아합니다.
           <br />
           유연한 컴포넌트를 만드는 것에 관심이 많고, 사용자 경험을 중요하게
