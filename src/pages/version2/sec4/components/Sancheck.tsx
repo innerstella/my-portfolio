@@ -27,6 +27,12 @@ const Sancheck = () => {
     link: "https://inner-stella.tistory.com/entry/React-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%9B%B9%EB%B7%B0-android-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0",
   };
 
+  const content5 = {
+    where: "tistory",
+    text: "데이터베이스 설계",
+    link: "https://inner-stella.tistory.com/entry/%EC%82%B0%EC%B1%85-%EA%B0%9C%EB%B0%9C%EC%9D%BC%EC%A7%80-1-NoSQL-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%84%A4%EA%B3%84-Cloud-Firestore",
+  };
+
   return (
     <div className="mt100">
       <MainContainer>
@@ -44,6 +50,7 @@ const Sancheck = () => {
             <LinkButton content={content2} />
             <LinkButton content={content3} />
             <LinkButton content={content4} />
+            <LinkButton content={content5} />
           </div>
         </div>
         <div className="box">
