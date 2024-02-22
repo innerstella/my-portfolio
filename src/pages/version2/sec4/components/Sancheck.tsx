@@ -98,19 +98,15 @@ const Sancheck = () => {
             추가하는 것만 가능하지만, 팀원의 요청 사항에 기반하여 다른 기능도
             추가할 예정입니다.
           </p>
-          <p className="subsubtitle mt30">📱 &nbsp;Flutter 웹뷰</p>
+          <p className="subsubtitle mt30">📈 &nbsp;랜딩 페이지 테스트</p>
           <p className="mt10 text">
-            웹 브라우저 뿐만 아니라 앱을 통해 쉽게 접근할 수 있도록 Flutter를
-            이용해 웹뷰를 구현했습니다. 플레이스토어와 앱스토어에도 출시
-            예정입니다.
+            초기 제품 테스트에 앞서, 제품의 타겟 사용자에 대한 이해를 높이고
+            비즈니스 아이디어에 대한 검증 및 구체화를 통해 랜딩 페이지를
+            제작하였습니다. Google Analytics를 통해 사용자들의 페이지 뷰 횟수와
+            평균 체류 기간을 확인하였고, 출시 알림 신청, 기능 선호도 조사, 자유
+            피드백 기능을 통해 얻은 인사이트를 바탕으로 현재 계속해서 아이디어를
+            구체화해나가고 있습니다.
           </p>
-          {/* <p className="subsubtitle mt30">🤓 &nbsp;배운 점</p>
-          <p className="mt10 text">
-            <li>OAuth의 작동 방식을 이해할 수 있었습니다.</li>
-            <li>
-              NoSQL 데이터베이스를 이용해 사용자의 정보를 관리해보았습니다.
-            </li>
-          </p> */}
         </div>
       </MainContainer>
     </div>
