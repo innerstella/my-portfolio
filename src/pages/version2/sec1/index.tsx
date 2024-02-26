@@ -17,7 +17,7 @@ const Sec1 = () => {
         <p className="green-text">
           1. 계획과 문서를 좋아하는 개발자{" "}
           <span className="gray-text">
-            {"// Notion, Trello를 즐겨 사용해요!"}
+            {"// Notion을 좋아하고 TIL과 기술 블로그를 작성하고 있어요!"}
           </span>
           <br />
           2. 함께 일하기 좋아하는 개발자{" "}
